@@ -40,31 +40,27 @@ public class CharacterController : MonoBehaviour
     public float speed = 0.0f;
     public float distance = 100.0f;
     public float time = 20.0f;
-  
+    // Start is called before the first frame update
     void Start()
     {
-        speed = distance / time;
-        print(speed);
-        if (speed > 70 || speed < 40)
-        {
-            print("you are breaking the law!");
-        }
-    }
-    
-    void update()
-    {
-       
-    }
-    /*
-    void speedcheck()
-    {
-      speed = distance / time;
         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+            SpeedCheck();
+    }
+
+    void SpeedCheck()
+    {
+        speed = distance / time;
+
         if (speed > 100 || speed < 45)
         {
             print("you are breaking the law!");
         }
-        print("you're travelling at " + speed + "KMS");
+        print("you're travelling at " + speed + "KMH");
     }
-    */
 }
