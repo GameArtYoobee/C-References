@@ -40,6 +40,8 @@ public class CharacterController : MonoBehaviour
     public float speed = 0.0f;
     public float distance = 100.0f;
     public float time = 20.0f;
+    public float MaxSpeedLimit = 100.0f;
+    public float MinSpeedLimit = 45.0f;
     // Start is called before the first frame update
     void Start()
     {
