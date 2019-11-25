@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForLoops : MonoBehaviour
 {
     private int EnemyDistance = 0;
+    private int enemyCount = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,9 @@ public class ForLoops : MonoBehaviour
        if (Input.GetKeyUp("space"))
         {
             EnemySearch();
+          //  EnemyDestruction();
+          // EnemyScan();
+
         }
     }
 
@@ -39,4 +43,29 @@ public class ForLoops : MonoBehaviour
             }
         }
     }
+
+    //While Loops
+   /* void EnemyDestruction()
+    {
+        while (enemyCount > 0)
+        {
+            print("There is an enemy! Lets Destroy it!");
+            enemyCount--;
+
+        }
+
+    }*/
+
+    //Do while Loops
+    /*
+     void EnemyScan()
+     {
+     bool isAlive = false;
+     do
+     {
+     print("Scanning for enemies!");
+     }
+     while (isAlive == true);
+     }
+     */
 }
