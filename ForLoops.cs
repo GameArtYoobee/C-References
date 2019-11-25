@@ -7,37 +7,40 @@ public class ForLoops : MonoBehaviour
     private int EnemyDistance = 0;
     private int enemyCount = 10;
 
-    private string[]enemiesList = new string[7];
+    private string[] enemiesList = new string[7];
+    private int weaponID = 10;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKeyUp("space"))
+        if (Input.GetKeyUp("space"))
         {
-           //nemySearch();
+            //nemySearch();
             // EnemyDestruction();
             // EnemyScan();
-            EnemiesRoaster();
+            // EnemiesRoaster();
+            WeaponSearch();
 
         }
     }
 
     //For Loops
-    void EnemySearch ()
+    void EnemySearch()
     {
-        for(int i = 0; i < 5; i ++ )
+        for (int i = 0; i < 5; i++)
         {
             EnemyDistance = Random.Range(1, 10);
-            if(EnemyDistance >= 9)
+            if (EnemyDistance >= 9)
             {
                 print("Enemy is far away!");
             }
-            if (EnemyDistance >= 4 && EnemyDistance <=7)
+            if (EnemyDistance >= 4 && EnemyDistance <= 7)
             {
                 print("Enemy is at a medium range!");
             }
@@ -62,15 +65,17 @@ public class ForLoops : MonoBehaviour
 
     //Do while Loops
     void EnemyScan()
-     {
-     bool isAlive = false;
-     do
-     {
-     print("Scanning for enemies!");
-     }
-     while (isAlive == true);
-     }
-     
+    {
+        bool isAlive = false;
+        do
+        {
+            print("Scanning for enemies!");
+        }
+        while (isAlive == true);
+    }
+
+    // Each loop & Array
+
     void EnemiesRoaster()
     {
         enemiesList[0] = "Test00";
@@ -80,11 +85,38 @@ public class ForLoops : MonoBehaviour
         enemiesList[4] = "Test04";
         enemiesList[5] = "Test05";
         enemiesList[6] = "Test06";
+        // enemiesList[7] = "Test07";
 
-        foreach(string enemyList in enemiesList)
+
+        foreach (string enemyList in enemiesList)
         {
             print(enemyList);
         }
-       
-     }
-}
+
+    }
+
+    void WeaponSearch()
+    {
+        weaponID = Random.Range(0, 8);
+        switch (weaponID)
+        {
+            case 1:
+                print("You've found a Sword!");
+                break;
+            case 2:
+                print("You've found a Gun!");
+                break;
+            case 3:
+                print("You've found a Axe!");
+                break;
+            case 4:
+                print("You've found a Dagger!");
+                break;
+            default:
+                print("You've found Nothing!");
+                break;
+
+        }
+    }
+
+   }
