@@ -6,6 +6,8 @@ public class ForLoops : MonoBehaviour
 {
     private int EnemyDistance = 0;
     private int enemyCount = 10;
+
+    private string[]enemiesList = new string[7];
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +19,15 @@ public class ForLoops : MonoBehaviour
     {
        if (Input.GetKeyUp("space"))
         {
-            EnemySearch();
-          //  EnemyDestruction();
-          // EnemyScan();
+           //nemySearch();
+            // EnemyDestruction();
+            // EnemyScan();
+            EnemiesRoaster();
 
         }
     }
 
+    //For Loops
     void EnemySearch ()
     {
         for(int i = 0; i < 5; i ++ )
@@ -45,7 +49,7 @@ public class ForLoops : MonoBehaviour
     }
 
     //While Loops
-   /* void EnemyDestruction()
+    void EnemyDestruction()
     {
         while (enemyCount > 0)
         {
@@ -54,11 +58,10 @@ public class ForLoops : MonoBehaviour
 
         }
 
-    }*/
+    }
 
     //Do while Loops
-    /*
-     void EnemyScan()
+    void EnemyScan()
      {
      bool isAlive = false;
      do
@@ -67,5 +70,21 @@ public class ForLoops : MonoBehaviour
      }
      while (isAlive == true);
      }
-     */
+     
+    void EnemiesRoaster()
+    {
+        enemiesList[0] = "Test00";
+        enemiesList[1] = "Test01";
+        enemiesList[2] = "Test02";
+        enemiesList[3] = "Test03";
+        enemiesList[4] = "Test04";
+        enemiesList[5] = "Test05";
+        enemiesList[6] = "Test06";
+
+        foreach(string enemyList in enemiesList)
+        {
+            print(enemyList);
+        }
+       
+     }
 }
